@@ -1,0 +1,126 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Noto Sans KR", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Noto Serif KR", ui-serif, serif;
+  --color-ink: #110e0c;
+  --color-panel: #1c1714;
+  --color-paper: #f6efe4;
+  --color-muted: #b5a89a;
+  --color-line: #433830;
+  --color-cinnabar: #ef6a5a;
+  --color-night: #12100e;
+  --color-mist: #8fd0c8;
+  --color-bark: #3a2a1c;
+}
+
+@layer base {
+  button:not(:disabled),
+  [role="button"]:not(:disabled),
+  summary {
+    cursor: pointer;
+  }
+
+  button:disabled {
+    opacity: 1;
+  }
+
+  html {
+    background: var(--color-ink);
+  }
+
+  body {
+    margin: 0;
+    min-height: 100%;
+    background: var(--color-ink);
+    color: var(--color-paper);
+    font-family: var(--font-sans);
+    line-height: 1.5;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-cinnabar);
+    outline-offset: 3px;
+  }
+
+  summary {
+    list-style: none;
+  }
+
+  summary::-webkit-details-marker {
+    display: none;
+  }
+}
+
+.lattice {
+  background-image:
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 22px,
+      color-mix(in srgb, var(--color-paper) 9%, transparent) 22px,
+      color-mix(in srgb, var(--color-paper) 9%, transparent) 23px
+    ),
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 22px,
+      color-mix(in srgb, var(--color-paper) 6%, transparent) 22px,
+      color-mix(in srgb, var(--color-paper) 6%, transparent) 23px
+    );
+}
+
+.sheet {
+  background: var(--color-panel);
+  border: 1px solid var(--color-line);
+  border-top: 4px solid var(--color-cinnabar);
+}
+
+.press {
+  transition: transform 150ms ease, background-color 150ms ease, border-color 150ms ease;
+}
+
+.press:active {
+  transform: scale(0.985);
+}
+
+.rise {
+  animation: rise 220ms ease-out;
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rise {
+    animation: none;
+  }
+
+  .press,
+  .press:active {
+    transition: none;
+    transform: none;
+  }
+}
+
+.rpg-root {
+  font-family: "Galmuri11", var(--font-sans);
+  touch-action: none;
+  user-select: none;
+}
+
+.rpg-panel {
+  background: color-mix(in srgb, var(--color-night) 92%, transparent);
+  border: 3px solid var(--color-bark);
+  box-shadow: inset 0 0 0 1px #c4a574;
+}

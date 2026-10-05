@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "귀멸 문답",
+      "hasCanvas": false,
+      "bodyTextLen": 488,
+      "bodyTextHash": "1a9bccf40d53ad5090a51a2a14f1f9e538a9441c2d0240d89fc98b20058aa003",
+      "bodyTextPrefix": "鬼滅の刃 귀멸 문답 비공식 설정 퀴즈 한 판 10문제 마을 오늘 밤의 시험. 보기를 고르면 바로 해설이 나옵니다. ",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "귀멸 문답",
+      "hasCanvas": false,
+      "bodyTextLen": 488,
+      "bodyTextHash": "1a9bccf40d53ad5090a51a2a14f1f9e538a9441c2d0240d89fc98b20058aa003",
+      "bodyTextPrefix": "鬼滅の刃 귀멸 문답 비공식 설정 퀴즈 한 판 10문제 마을 오늘 밤의 시험. 보기를 고르면 바로 해설이 나옵니다. ",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-preview.json"
+}
